@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="root">
+        <div class="color-box">
+            <div class="color-box-up">
+                <div class="title-box">
+                    <h3 class="title">Display Color</h3>
+                    <button class="text" id="color-btn" title="Click here generate color">Generate Random Color</button>
+                </div>
+                <div class="color-plate"></div>
+            </div>
+            <div class="color-box-down">
+                <div class="title-box">
+                    <h3 class="title">Change & Copy Color</h3>
+                    <button class="text" id="copy-btn" title="copy to Clipboard">Copy Color Code</button>
+                </div>
+                <div class="select-color">
+                    <p class="sub-title">Select Copy Mode</p>
+                    <div class="radio-btn">
+                        <input type="radio" value="hex" id="color-mode-hex" name="color-mode" checked > <label for="color-mode-hex" >Hex</label>
+                        <input type="radio" value="rgb" id="color-mode-rgb" name="color-mode"> <label for="color-mode-rgb">RGB</label>
+                    </div>
+                </div>
+                <div class="show-color">
+                    <div class="show-color-inner">
+                        <p class="color-title">HEX</p>
+                        <div class=" color hex-color">
+                            <p class="icon">#</p>
+                            <input type="text" value="000000" id="input" class="color-input" placeholder="000000"> 
+                        </div>
+                    </div>
+
+                    <div class="show-color-inner">
+                        <p class="color-title">RGB</p>
+                        <div class="color">
+                            <input type="text" value="rgb(0,0,0)" id="output" class="color-input" placeholder="rgb(0,0,0)" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="adjust-color">
+                    <p class="sub-title">Adjust RGB Colors</p>
+                    <div class="color-slider-group">
+                        <div class="slider-color">
+                            <div class="slider-color-title"><p>Red</p> <p class="color-value" id="color-slider-red-label">0</p></div>
+                            <input type="range" min="0" max="255" value="0" class="color-slider" id="color-slider-red">
+                        </div>
+
+                        <div class="slider-color">
+                            <div class="slider-color-title"><p>Green</p> <p class="color-value" id="color-slider-green-label">0</p></div>
+                            <input type="range" min="0" max="255" value="0" class="color-slider" id="color-slider-green">
+                        </div>
+
+                        <div class="slider-color">
+                            <div class="slider-color-title"><p>Blue</p> <p class="color-value" id="color-slider-blue-label">0</p></div>
+                            <input type="range" min="0" max="255" value="0" class="color-slider" id="color-slider-blue">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
